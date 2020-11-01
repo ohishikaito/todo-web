@@ -11,14 +11,9 @@
 
 <script>
 export default {
+  props: ["todos"], // <- これ！
   data() {
     return {
-      todos: [
-        {
-          title: "test",
-          username: "太郎",
-        },
-      ],
       search: "",
       headers: [
         {
@@ -28,6 +23,7 @@ export default {
           value: "title",
         },
         { text: "ユーザー名", value: "username" },
+        // ここのtodosはpropsで受け取るので削除します
       ],
     };
   },
